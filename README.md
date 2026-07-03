@@ -89,11 +89,7 @@ Read in order for a full path from "no RL" to "trained a real model":
 2. **[GRPO from scratch](tutorials/02-grpo-from-scratch.md)** — the full loop on a tiny model with a verifiable reward, runnable in seconds.
 3. **[GRPO on a real LLM](tutorials/03-grpo-real-llm.md)** — Qwen2.5 + GSM8K: the tokenizer, chat template, and the three masks that actually break real runs.
 
-Then: [debugging guide](guides/
-Function (3 marks)
-Sketch a graph that is a function and has a domain of {xER} and a range of {yER, y2} 
-Explain in your own words how you know it is a function.
-) · [tuning guide](guides/debugging_and_tuning_grpo.md)
+Then: [debugging guide](guides/debugging_and_tuning_grpo.md)
 
 ## How it works (the loop in one paragraph)
 
