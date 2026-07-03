@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" viewBox="0 0 680 482" role="img" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title>How the GRPO completion mask and loss mask are computed, step by step</title>
+<desc>Top panel: for a completion [3,5,9,2,9,4] with EOS=9, rows show is_eos, cumsum, cumsum minus is_eos, the after-EOS test, and the final mask [1,1,1,0,0,0]. Bottom panel: a full sequence [P,P,a,b,c,d] with its attention mask, the loss mask before shifting, and the loss mask after dropping the first column.</desc>
+<style>
+.t{font-size:14px;fill:#3d3d3a}
+.ts{font-size:12px;fill:#73726c}
+.th{font-size:14px;font-weight:500;fill:#3d3d3a}
+.box rect{fill:#ffffff;stroke:#d3d1c7;stroke-width:.5}
+.c-teal rect{fill:#E1F5EE;stroke:#0F6E56;stroke-width:.5}
+.c-gray rect{fill:#F1EFE8;stroke:#888780;stroke-width:.5}
+</style>
+<rect x="0" y="0" width="680" height="482" rx="12" fill="#fbfaf7"/>
+
+<text class="th" x="30" y="30">completion_mask — keep tokens up to and including the first EOS (=9)</text>
+
+<text class="ts" x="195" y="70" text-anchor="end" dominant-baseline="central">completions</text>
+<g class="box"><rect x="210" y="57" width="60" height="26" rx="4"/></g><text class="t" x="240" y="70" text-anchor="middle" dominant-baseline="central">3</text>
+<g class="box"><rect x="278" y="57" width="60" height="26" rx="4"/></g><text class="t" x="308" y="70" text-anchor="middle" dominant-baseline="central">5</text>
+<g class="box"><rect x="346" y="57" width="60" height="26" rx="4"/></g><text class="t" x="376" y="70" text-anchor="middle" dominant-baseline="central">9</text>
+<g class="box"><rect x="414" y="57" width="60" height="26" rx="4"/></g><text class="t" x="444" y="70" text-anchor="middle" dominant-baseline="central">2</text>
+<g class="box"><rect x="482" y="57" width="60" height="26" rx="4"/></g><text class="t" x="512" y="70" text-anchor="middle" dominant-baseline="central">9</text>
+<g class="box"><rect x="550" y="57" width="60" height="26" rx="4"/></g><text class="t" x="580" y="70" text-anchor="middle" dominant-baseline="central">4</text>
+
+<text class="ts" x="195" y="102" text-anchor="end" dominant-baseline="central">is_eos</text>
+<g class="box"><rect x="210" y="89" width="60" height="26" rx="4"/></g><text class="t" x="240" y="102" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="278" y="89" width="60" height="26" rx="4"/></g><text class="t" x="308" y="102" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="346" y="89" width="60" height="26" rx="4"/></g><text class="t" x="376" y="102" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="box"><rect x="414" y="89" width="60" height="26" rx="4"/></g><text class="t" x="444" y="102" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="482" y="89" width="60" height="26" rx="4"/></g><text class="t" x="512" y="102" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="box"><rect x="550" y="89" width="60" height="26" rx="4"/></g><text class="t" x="580" y="102" text-anchor="middle" dominant-baseline="central">0</text>
+
+<text class="ts" x="195" y="134" text-anchor="end" dominant-baseline="central">cumsum</text>
+<g class="box"><rect x="210" y="121" width="60" height="26" rx="4"/></g><text class="t" x="240" y="134" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="278" y="121" width="60" height="26" rx="4"/></g><text class="t" x="308" y="134" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="346" y="121" width="60" height="26" rx="4"/></g><text class="t" x="376" y="134" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="box"><rect x="414" y="121" width="60" height="26" rx="4"/></g><text class="t" x="444" y="134" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="box"><rect x="482" y="121" width="60" height="26" rx="4"/></g><text class="t" x="512" y="134" text-anchor="middle" dominant-baseline="central">2</text>
+<g class="box"><rect x="550" y="121" width="60" height="26" rx="4"/></g><text class="t" x="580" y="134" text-anchor="middle" dominant-baseline="central">2</text>
+
+<text class="ts" x="195" y="166" text-anchor="end" dominant-baseline="central">− is_eos</text>
+<g class="box"><rect x="210" y="153" width="60" height="26" rx="4"/></g><text class="t" x="240" y="166" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="278" y="153" width="60" height="26" rx="4"/></g><text class="t" x="308" y="166" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="346" y="153" width="60" height="26" rx="4"/></g><text class="t" x="376" y="166" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="box"><rect x="414" y="153" width="60" height="26" rx="4"/></g><text class="t" x="444" y="166" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="box"><rect x="482" y="153" width="60" height="26" rx="4"/></g><text class="t" x="512" y="166" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="box"><rect x="550" y="153" width="60" height="26" rx="4"/></g><text class="t" x="580" y="166" text-anchor="middle" dominant-baseline="central">2</text>
+
+<text class="ts" x="195" y="198" text-anchor="end" dominant-baseline="central">&gt; 0  (after EOS?)</text>
+<g class="box"><rect x="210" y="185" width="60" height="26" rx="4"/></g><text class="t" x="240" y="198" text-anchor="middle" dominant-baseline="central">F</text>
+<g class="box"><rect x="278" y="185" width="60" height="26" rx="4"/></g><text class="t" x="308" y="198" text-anchor="middle" dominant-baseline="central">F</text>
+<g class="box"><rect x="346" y="185" width="60" height="26" rx="4"/></g><text class="t" x="376" y="198" text-anchor="middle" dominant-baseline="central">F</text>
+<g class="box"><rect x="414" y="185" width="60" height="26" rx="4"/></g><text class="t" x="444" y="198" text-anchor="middle" dominant-baseline="central">T</text>
+<g class="box"><rect x="482" y="185" width="60" height="26" rx="4"/></g><text class="t" x="512" y="198" text-anchor="middle" dominant-baseline="central">T</text>
+<g class="box"><rect x="550" y="185" width="60" height="26" rx="4"/></g><text class="t" x="580" y="198" text-anchor="middle" dominant-baseline="central">T</text>
+
+<text class="th" x="195" y="230" text-anchor="end" dominant-baseline="central">mask  (~)</text>
+<g class="c-teal"><rect x="210" y="217" width="60" height="26" rx="4"/></g><text class="t" x="240" y="230" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-teal"><rect x="278" y="217" width="60" height="26" rx="4"/></g><text class="t" x="308" y="230" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-teal"><rect x="346" y="217" width="60" height="26" rx="4"/></g><text class="t" x="376" y="230" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-gray"><rect x="414" y="217" width="60" height="26" rx="4"/></g><text class="t" x="444" y="230" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="482" y="217" width="60" height="26" rx="4"/></g><text class="t" x="512" y="230" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="550" y="217" width="60" height="26" rx="4"/></g><text class="t" x="580" y="230" text-anchor="middle" dominant-baseline="central">0</text>
+
+<line x1="30" y1="262" x2="640" y2="262" stroke="#888780" stroke-width="0.5" opacity="0.5"/>
+
+<text class="th" x="30" y="284">build_masks — line prompt + completion up, then shift for the logps</text>
+
+<text class="ts" x="240" y="308" text-anchor="middle" dominant-baseline="central">pad</text>
+<text class="ts" x="308" y="308" text-anchor="middle" dominant-baseline="central">pad</text>
+<text class="ts" x="376" y="308" text-anchor="middle" dominant-baseline="central">prompt</text>
+<text class="ts" x="444" y="308" text-anchor="middle" dominant-baseline="central">prompt</text>
+<text class="ts" x="512" y="308" text-anchor="middle" dominant-baseline="central">comp</text>
+<text class="ts" x="580" y="308" text-anchor="middle" dominant-baseline="central">comp</text>
+
+<text class="ts" x="195" y="330" text-anchor="end" dominant-baseline="central">full_ids</text>
+<g class="box"><rect x="210" y="317" width="60" height="26" rx="4"/></g><text class="t" x="240" y="330" text-anchor="middle" dominant-baseline="central">P</text>
+<g class="box"><rect x="278" y="317" width="60" height="26" rx="4"/></g><text class="t" x="308" y="330" text-anchor="middle" dominant-baseline="central">P</text>
+<g class="box"><rect x="346" y="317" width="60" height="26" rx="4"/></g><text class="t" x="376" y="330" text-anchor="middle" dominant-baseline="central">a</text>
+<g class="box"><rect x="414" y="317" width="60" height="26" rx="4"/></g><text class="t" x="444" y="330" text-anchor="middle" dominant-baseline="central">b</text>
+<g class="box"><rect x="482" y="317" width="60" height="26" rx="4"/></g><text class="t" x="512" y="330" text-anchor="middle" dominant-baseline="central">c</text>
+<g class="box"><rect x="550" y="317" width="60" height="26" rx="4"/></g><text class="t" x="580" y="330" text-anchor="middle" dominant-baseline="central">d</text>
+
+<text class="ts" x="195" y="362" text-anchor="end" dominant-baseline="central">full_attn</text>
+<g class="c-gray"><rect x="210" y="349" width="60" height="26" rx="4"/></g><text class="t" x="240" y="362" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="278" y="349" width="60" height="26" rx="4"/></g><text class="t" x="308" y="362" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-teal"><rect x="346" y="349" width="60" height="26" rx="4"/></g><text class="t" x="376" y="362" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-teal"><rect x="414" y="349" width="60" height="26" rx="4"/></g><text class="t" x="444" y="362" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-teal"><rect x="482" y="349" width="60" height="26" rx="4"/></g><text class="t" x="512" y="362" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-teal"><rect x="550" y="349" width="60" height="26" rx="4"/></g><text class="t" x="580" y="362" text-anchor="middle" dominant-baseline="central">1</text>
+
+<text class="ts" x="195" y="394" text-anchor="end" dominant-baseline="central">loss_mask</text>
+<g class="c-gray"><rect x="210" y="381" width="60" height="26" rx="4"/></g><text class="t" x="240" y="394" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="278" y="381" width="60" height="26" rx="4"/></g><text class="t" x="308" y="394" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="346" y="381" width="60" height="26" rx="4"/></g><text class="t" x="376" y="394" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="414" y="381" width="60" height="26" rx="4"/></g><text class="t" x="444" y="394" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-teal"><rect x="482" y="381" width="60" height="26" rx="4"/></g><text class="t" x="512" y="394" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-teal"><rect x="550" y="381" width="60" height="26" rx="4"/></g><text class="t" x="580" y="394" text-anchor="middle" dominant-baseline="central">1</text>
+
+<text class="th" x="195" y="426" text-anchor="end" dominant-baseline="central">loss_mask[:, 1:]</text>
+<rect x="210" y="413" width="60" height="26" rx="4" fill="none" stroke="#888780" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.7"/>
+<text class="ts" x="240" y="426" text-anchor="middle" dominant-baseline="central">drop</text>
+<g class="c-gray"><rect x="278" y="413" width="60" height="26" rx="4"/></g><text class="t" x="308" y="426" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="346" y="413" width="60" height="26" rx="4"/></g><text class="t" x="376" y="426" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-gray"><rect x="414" y="413" width="60" height="26" rx="4"/></g><text class="t" x="444" y="426" text-anchor="middle" dominant-baseline="central">0</text>
+<g class="c-teal"><rect x="482" y="413" width="60" height="26" rx="4"/></g><text class="t" x="512" y="426" text-anchor="middle" dominant-baseline="central">1</text>
+<g class="c-teal"><rect x="550" y="413" width="60" height="26" rx="4"/></g><text class="t" x="580" y="426" text-anchor="middle" dominant-baseline="central">1</text>
+
+<g class="c-teal"><rect x="210" y="456" width="16" height="14" rx="3"/></g>
+<text class="ts" x="232" y="463" dominant-baseline="central">1 = keep / train</text>
+<g class="c-gray"><rect x="360" y="456" width="16" height="14" rx="3"/></g>
+<text class="ts" x="382" y="463" dominant-baseline="central">0 = ignore</text>
+</svg>

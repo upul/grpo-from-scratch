@@ -1,0 +1,602 @@
+[
+  {
+    "step": 0,
+    "reward": 0.25,
+    "kl": 0.0008223603363148868,
+    "clipfrac": 0.007488479372113943,
+    "comp_len": 217.0,
+    "zero_adv": 0.0,
+    "solve": 0.25,
+    "solvable": 1.0
+  },
+  {
+    "step": 5,
+    "reward": 0.0,
+    "kl": 0.0018927291966974735,
+    "clipfrac": 0.004471414722502232,
+    "comp_len": 391.375,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 10,
+    "reward": 0.0,
+    "kl": 0.001524632447399199,
+    "clipfrac": 0.0036484245210886,
+    "comp_len": 376.875,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 15,
+    "reward": 0.0,
+    "kl": 0.001423599082045257,
+    "clipfrac": 0.005568814463913441,
+    "comp_len": 314.25,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 20,
+    "reward": 0.0,
+    "kl": 0.0017245425842702389,
+    "clipfrac": 0.005279831122606993,
+    "comp_len": 355.125,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 25,
+    "reward": 0.75,
+    "kl": 0.0016386036295443773,
+    "clipfrac": 0.0045615811832249165,
+    "comp_len": 246.625,
+    "zero_adv": 0.0,
+    "solve": 0.75,
+    "solvable": 1.0
+  },
+  {
+    "step": 30,
+    "reward": 0.875,
+    "kl": 0.0014860378578305244,
+    "clipfrac": 0.0020275749266147614,
+    "comp_len": 308.25,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 35,
+    "reward": 0.5,
+    "kl": 0.0023853846359997988,
+    "clipfrac": 0.0030998140573501587,
+    "comp_len": 201.625,
+    "zero_adv": 0.0,
+    "solve": 0.5,
+    "solvable": 1.0
+  },
+  {
+    "step": 40,
+    "reward": 0.75,
+    "kl": 0.0021673075389117002,
+    "clipfrac": 0.003687768941745162,
+    "comp_len": 203.375,
+    "zero_adv": 0.0,
+    "solve": 0.75,
+    "solvable": 1.0
+  },
+  {
+    "step": 45,
+    "reward": 0.625,
+    "kl": 0.0019463107455521822,
+    "clipfrac": 0.004081632476300001,
+    "comp_len": 306.25,
+    "zero_adv": 0.0,
+    "solve": 0.625,
+    "solvable": 1.0
+  },
+  {
+    "step": 50,
+    "reward": 0.0,
+    "kl": 0.0026567091699689627,
+    "clipfrac": 0.007078986614942551,
+    "comp_len": 335.5,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 55,
+    "reward": 0.875,
+    "kl": 0.002358138095587492,
+    "clipfrac": 0.005401234608143568,
+    "comp_len": 162.0,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 60,
+    "reward": 0.0,
+    "kl": 0.0021027461625635624,
+    "clipfrac": 0.005279831122606993,
+    "comp_len": 355.125,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 65,
+    "reward": 0.625,
+    "kl": 0.001460118917748332,
+    "clipfrac": 0.004159239586442709,
+    "comp_len": 210.375,
+    "zero_adv": 0.0,
+    "solve": 0.625,
+    "solvable": 1.0
+  },
+  {
+    "step": 70,
+    "reward": 0.5,
+    "kl": 0.001933358726091683,
+    "clipfrac": 0.00701344246044755,
+    "comp_len": 213.875,
+    "zero_adv": 0.0,
+    "solve": 0.5,
+    "solvable": 1.0
+  },
+  {
+    "step": 75,
+    "reward": 0.0,
+    "kl": 0.0020850193686783314,
+    "clipfrac": 0.003559985663741827,
+    "comp_len": 351.125,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 80,
+    "reward": 1.0,
+    "kl": 0.003561954479664564,
+    "clipfrac": 0.003940886817872524,
+    "comp_len": 126.875,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 85,
+    "reward": 0.5,
+    "kl": 0.0032964106649160385,
+    "clipfrac": 0.008827238343656063,
+    "comp_len": 198.25,
+    "zero_adv": 0.0,
+    "solve": 0.5,
+    "solvable": 1.0
+  },
+  {
+    "step": 90,
+    "reward": 0.125,
+    "kl": 0.0021954411640763283,
+    "clipfrac": 0.001134215504862368,
+    "comp_len": 330.625,
+    "zero_adv": 0.0,
+    "solve": 0.125,
+    "solvable": 1.0
+  },
+  {
+    "step": 95,
+    "reward": 0.875,
+    "kl": 0.003898988477885723,
+    "clipfrac": 0.009702850133180618,
+    "comp_len": 206.125,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 100,
+    "reward": 0.625,
+    "kl": 0.0032243102323263884,
+    "clipfrac": 0.005338808987289667,
+    "comp_len": 304.375,
+    "zero_adv": 0.0,
+    "solve": 0.625,
+    "solvable": 1.0
+  },
+  {
+    "step": 105,
+    "reward": 0.875,
+    "kl": 0.006009127013385296,
+    "clipfrac": 0.00743331853300333,
+    "comp_len": 285.875,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 110,
+    "reward": 1.0,
+    "kl": 0.007456586696207523,
+    "clipfrac": 0.006376195698976517,
+    "comp_len": 235.25,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 115,
+    "reward": 0.625,
+    "kl": 0.00956563837826252,
+    "clipfrac": 0.00909090880304575,
+    "comp_len": 178.75,
+    "zero_adv": 0.0,
+    "solve": 0.625,
+    "solvable": 1.0
+  },
+  {
+    "step": 120,
+    "reward": 0.375,
+    "kl": 0.014025067910552025,
+    "clipfrac": 0.006791849620640278,
+    "comp_len": 312.875,
+    "zero_adv": 0.0,
+    "solve": 0.375,
+    "solvable": 1.0
+  },
+  {
+    "step": 125,
+    "reward": 0.75,
+    "kl": 0.024623265489935875,
+    "clipfrac": 0.011771300807595253,
+    "comp_len": 223.0,
+    "zero_adv": 0.0,
+    "solve": 0.75,
+    "solvable": 1.0
+  },
+  {
+    "step": 130,
+    "reward": 0.875,
+    "kl": 0.027458202093839645,
+    "clipfrac": 0.0043774317018687725,
+    "comp_len": 257.0,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 135,
+    "reward": 0.0,
+    "kl": 0.01606680266559124,
+    "clipfrac": 0.00654349522665143,
+    "comp_len": 324.75,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 140,
+    "reward": 0.25,
+    "kl": 0.01962749846279621,
+    "clipfrac": 0.005396653898060322,
+    "comp_len": 231.625,
+    "zero_adv": 0.0,
+    "solve": 0.25,
+    "solvable": 1.0
+  },
+  {
+    "step": 145,
+    "reward": 0.0,
+    "kl": 0.027867022901773453,
+    "clipfrac": 0.003484320593997836,
+    "comp_len": 394.625,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 150,
+    "reward": 1.0,
+    "kl": 0.017413316294550896,
+    "clipfrac": 0.008768433704972267,
+    "comp_len": 313.625,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 155,
+    "reward": 0.75,
+    "kl": 0.01744125224649906,
+    "clipfrac": 0.005908419378101826,
+    "comp_len": 169.25,
+    "zero_adv": 0.0,
+    "solve": 0.75,
+    "solvable": 1.0
+  },
+  {
+    "step": 160,
+    "reward": 0.0,
+    "kl": 0.024280043318867683,
+    "clipfrac": 0.008325624279677868,
+    "comp_len": 270.25,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  },
+  {
+    "step": 165,
+    "reward": 1.0,
+    "kl": 0.020700039342045784,
+    "clipfrac": 0.010760401375591755,
+    "comp_len": 174.25,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 170,
+    "reward": 0.375,
+    "kl": 0.01819574646651745,
+    "clipfrac": 0.00807823147624731,
+    "comp_len": 294.0,
+    "zero_adv": 0.0,
+    "solve": 0.375,
+    "solvable": 1.0
+  },
+  {
+    "step": 175,
+    "reward": 1.0,
+    "kl": 0.015517840161919594,
+    "clipfrac": 0.002376425778493285,
+    "comp_len": 263.0,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 180,
+    "reward": 0.875,
+    "kl": 0.02984451875090599,
+    "clipfrac": 0.004675628151744604,
+    "comp_len": 213.875,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 185,
+    "reward": 1.0,
+    "kl": 0.01602143421769142,
+    "clipfrac": 0.006159014534205198,
+    "comp_len": 223.25,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 190,
+    "reward": 0.125,
+    "kl": 0.026096733286976814,
+    "clipfrac": 0.006294256541877985,
+    "comp_len": 317.75,
+    "zero_adv": 0.0,
+    "solve": 0.125,
+    "solvable": 1.0
+  },
+  {
+    "step": 195,
+    "reward": 0.75,
+    "kl": 0.021562959998846054,
+    "clipfrac": 0.00303161540068686,
+    "comp_len": 288.625,
+    "zero_adv": 0.0,
+    "solve": 0.75,
+    "solvable": 1.0
+  },
+  {
+    "step": 200,
+    "reward": 0.125,
+    "kl": 0.031063862144947052,
+    "clipfrac": 0.006335282698273659,
+    "comp_len": 256.5,
+    "zero_adv": 0.0,
+    "solve": 0.125,
+    "solvable": 1.0
+  },
+  {
+    "step": 205,
+    "reward": 0.5,
+    "kl": 0.013989283703267574,
+    "clipfrac": 0.00677637942135334,
+    "comp_len": 258.25,
+    "zero_adv": 0.0,
+    "solve": 0.5,
+    "solvable": 1.0
+  },
+  {
+    "step": 210,
+    "reward": 0.125,
+    "kl": 0.02198128029704094,
+    "clipfrac": 0.0014975664671510458,
+    "comp_len": 333.875,
+    "zero_adv": 0.0,
+    "solve": 0.125,
+    "solvable": 1.0
+  },
+  {
+    "step": 215,
+    "reward": 0.875,
+    "kl": 0.026088722050189972,
+    "clipfrac": 0.010374640114605427,
+    "comp_len": 216.875,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 220,
+    "reward": 0.875,
+    "kl": 0.02402147464454174,
+    "clipfrac": 0.0035226773470640182,
+    "comp_len": 283.875,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 225,
+    "reward": 0.875,
+    "kl": 0.013168343342840672,
+    "clipfrac": 0.006143045146018267,
+    "comp_len": 284.875,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 230,
+    "reward": 1.0,
+    "kl": 0.02941182069480419,
+    "clipfrac": 0.016719745472073555,
+    "comp_len": 157.0,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 235,
+    "reward": 1.0,
+    "kl": 0.02862357534468174,
+    "clipfrac": 0.00800000037997961,
+    "comp_len": 156.25,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 240,
+    "reward": 0.875,
+    "kl": 0.01696651428937912,
+    "clipfrac": 0.0017172294901683927,
+    "comp_len": 218.375,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 245,
+    "reward": 0.875,
+    "kl": 0.02028331719338894,
+    "clipfrac": 0.006497022230178118,
+    "comp_len": 230.875,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 250,
+    "reward": 0.125,
+    "kl": 0.01672757975757122,
+    "clipfrac": 0.005649717524647713,
+    "comp_len": 309.75,
+    "zero_adv": 0.0,
+    "solve": 0.125,
+    "solvable": 1.0
+  },
+  {
+    "step": 255,
+    "reward": 0.375,
+    "kl": 0.025311293080449104,
+    "clipfrac": 0.009636443108320236,
+    "comp_len": 285.375,
+    "zero_adv": 0.0,
+    "solve": 0.375,
+    "solvable": 1.0
+  },
+  {
+    "step": 260,
+    "reward": 0.375,
+    "kl": 0.04093674197793007,
+    "clipfrac": 0.008286087773740292,
+    "comp_len": 286.625,
+    "zero_adv": 0.0,
+    "solve": 0.375,
+    "solvable": 1.0
+  },
+  {
+    "step": 265,
+    "reward": 1.0,
+    "kl": 0.031113462522625923,
+    "clipfrac": 0.01496792584657669,
+    "comp_len": 175.375,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 270,
+    "reward": 1.0,
+    "kl": 0.023926900699734688,
+    "clipfrac": 0.00557724479585886,
+    "comp_len": 224.125,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 275,
+    "reward": 0.375,
+    "kl": 0.030991081148386,
+    "clipfrac": 0.0032284099142998457,
+    "comp_len": 309.75,
+    "zero_adv": 0.0,
+    "solve": 0.375,
+    "solvable": 1.0
+  },
+  {
+    "step": 280,
+    "reward": 1.0,
+    "kl": 0.020974313840270042,
+    "clipfrac": 0.009097270667552948,
+    "comp_len": 178.625,
+    "zero_adv": 1.0,
+    "solve": 1.0,
+    "solvable": 1.0
+  },
+  {
+    "step": 285,
+    "reward": 0.375,
+    "kl": 0.03873855993151665,
+    "clipfrac": 0.008232065476477146,
+    "comp_len": 318.875,
+    "zero_adv": 0.0,
+    "solve": 0.375,
+    "solvable": 1.0
+  },
+  {
+    "step": 290,
+    "reward": 0.875,
+    "kl": 0.02508743293583393,
+    "clipfrac": 0.010911424644291401,
+    "comp_len": 194.75,
+    "zero_adv": 0.0,
+    "solve": 0.875,
+    "solvable": 1.0
+  },
+  {
+    "step": 295,
+    "reward": 0.0,
+    "kl": 0.04315560311079025,
+    "clipfrac": 0.0053125000558793545,
+    "comp_len": 400.0,
+    "zero_adv": 1.0,
+    "solve": 0.0,
+    "solvable": 0.0
+  }
+]

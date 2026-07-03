@@ -1,0 +1,22 @@
+{
+  "base_acc": 0.8,
+  "final_acc": 0.83,
+  "improvement_points": 2.9999999999999916,
+  "config": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "group": 8,
+    "prompts_per_step": 1,
+    "max_new": 400,
+    "epochs": 2,
+    "eps": 0.2,
+    "beta": 0.04,
+    "lr": 1e-05,
+    "steps": 300,
+    "temp": 1.0,
+    "seed": 0,
+    "eval_n": 100,
+    "log_every": 5,
+    "save_every": 50,
+    "out_dir": "./grpo_qwen15b_gsm8k"
+  }
+}
