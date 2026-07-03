@@ -1,8 +1,3 @@
----
-title: Lightweight Guide to understanding GRPO and RL principles
-description: A beginner-friendly guide to Group Relative Policy Optimization (GRPO), the algorithm behind modern reasoning models, with no assumed reinforcement learning knowledge.
----
-
 # Lightweight Guide to understanding GRPO and RL principles
 
 *~11 minute read*
@@ -132,7 +127,7 @@ But there's a catch. We generate the group **once** with the model as it is now,
 
 The fix is **importance sampling**. We store the log-probabilities from the policy that *actually generated* the data (call it $\pi_{\theta_{old}}$), and correct each update with the ratio:
 
-$$r_{i,t}(\theta) = \frac{\pi_\theta(o_{i,t} \mid q, o_{i,<t})}{\pi_{\theta_{old}}(o_{i,t} \mid q, o_{i,<t})}$$
+$$r_{i,t}(\theta) = \frac{\pi_\theta(o_{i,t} \mid q, o_{i,\lt t})}{\pi_{\theta_{old}}(o_{i,t} \mid q, o_{i, \lt t})}$$
 
 - Ratio > 1: the current model likes this token *more* than the generating model did.
 - Ratio < 1: it likes it *less*.
