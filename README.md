@@ -4,7 +4,7 @@ A ground-up implementation of **GRPO** (Group Relative Policy Optimization) — 
 
 It's equal parts **tutorial series** (build GRPO from first principles) and **working training pipeline**: a hand-written GRPO loop that fine-tunes **Qwen2.5-1.5B-Instruct** on GSM8K and lifts its accuracy **80.0% → 83.0%** on a single A100.
 
-GRPO on Qwen2.5-1.5B + GSM8K — reward, solvable-group signal, and KL/clip stability
+![GRPO on Qwen2.5-1.5B + GSM8K — reward, solvable-group signal, and KL/clip stability](assets/curves.png)
 
 ---
 
