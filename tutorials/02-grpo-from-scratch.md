@@ -1,8 +1,3 @@
----
-title: Implementing GRPO from Scratch on a Tiny LLM
-description: A hands-on, beginner-friendly walkthrough that builds GRPO end-to-end in plain PyTorch — sampling a group, computing group-relative advantages, the clipped surrogate loss, and the KL penalty — and trains a small language model with it.
----
-
 # Implementing GRPO from Scratch on a Tiny LLM
 
 *~12 minute read*
@@ -282,5 +277,3 @@ The conceptual core — sample a group, score it, advantage = relative-to-group,
 GRPO is one of those rare algorithms that's easier to implement than to describe. Stripped down, it's a sampling loop wrapped around a single idea: *let a handful of attempts at the same problem grade each other, and lean toward whatever beat the average.* Removing PPO's critic doesn't just save memory — it removes the hardest-to-debug component entirely, which is why a complete, correct implementation fits on one screen.
 
 If you typed this in and watched your own reward curve climb, you now understand GRPO more concretely than any equation can convey. From here, swapping in a real model and a real reward is a change of degree, not of kind.
-
-I hope you found this helpful.

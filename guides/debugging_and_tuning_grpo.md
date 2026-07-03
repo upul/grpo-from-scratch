@@ -1,8 +1,3 @@
----
-title: Debugging and Tuning GRPO — A Practical Reference
-description: A model-agnostic, reusable field guide for debugging and tuning any GRPO run — the metrics to log, what each one means and how it fails, what every hyperparameter does and which gauge it moves, plus a baseline-calibration workflow and a pre-flight checklist. Includes a verified toy run as evidence for the universal patterns.
----
-
 # Debugging and Tuning GRPO — A Practical Reference
 
 *~15 minute read · keep this open during runs*
@@ -148,5 +143,3 @@ Read those as *directions you can rely on*, then calibrate the actual magnitudes
 ## Conclusion
 
 Debugging and tuning GRPO stops being guesswork once you can read the dashboard: reward says *whether* it works, clip fraction and instability say if steps are too big, KL says if the leash is wrong, entropy says if exploration is alive, and the zero-advantage rate says if your groups are teaching anything. Each hyperparameter moves one specific gauge — so tuning is "read the gauge, turn the matching knob." That mapping is permanent and works on any model. What changes per run is only what "normal" looks like — which you establish with a baseline run, not by importing anyone's numbers, including this guide's.
-
-Keep this open during your next run.

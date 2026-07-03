@@ -1,8 +1,3 @@
----
-title: GRPO from Scratch on a Real LLM — Qwen2.5 + GSM8K, with Debugging
-description: A hands-on, beginner-friendly walkthrough that takes the hand-written GRPO loop from the toy tutorial and runs it on a real model (Qwen2.5-0.5B-Instruct) against a real dataset (GSM8K) — covering the tokenizer, chat template, prompt masking, a verifiable reward, and how to debug the run properly.
----
-
 # GRPO from Scratch on a Real LLM — Qwen2.5 + GSM8K
 
 *~15 minute read*
@@ -362,5 +357,3 @@ None of these change the loop you just wrote; they're small, targeted edits to t
 ## Conclusion
 
 Going from the toy to a real model didn't change GRPO at all — it changed everything *around* GRPO. The algorithm stayed the four lines you already understood; the work was in the tokenizer, the chat template, the three masks that have to line up, the verifiable reward (and its sneaky parser bug), and the dashboard you watch when it misbehaves. That ring of plumbing and diagnostics is exactly the gap between "I understand GRPO" and "I can run GRPO," and you've now crossed it on a real LLM.
-
-I hope you found this helpful.

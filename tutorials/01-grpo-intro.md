@@ -236,5 +236,3 @@ GRPO is one of those rare ideas that's easier than what it replaces. Stripped do
 3. **Reuse expensive data safely** — importance sampling to correct for staleness, clipping to keep each step small, a KL penalty to stay anchored.
 
 If you internalize those three, you understand not just GRPO but the whole family it belongs to. PPO, RLOO, GRPO, and friends mostly differ in *how they get the baseline*; the clipping and importance sampling at the core stay the same. GRPO's answer just happens to be the simplest one that works — which, in machine learning, is usually the one that wins.
-
-I hope you found this helpful.
