@@ -149,6 +149,32 @@ The meta-lesson: in RL post-training the algorithm is the easy 20%. The reward, 
 - **Algorithm refinements — all small edits to this loop:** DAPO-style *dynamic sampling* (skip zero-advantage groups), *Dr. GRPO* (drop the length/std normalization biases), and *Clip-Higher* (asymmetric clip range to preserve exploration). Covered in the [tuning guide](guides/grpo-tuning-guide.md).
 - **Faster rollouts.** Generation dominates step time; a vLLM-accelerated rollout is the obvious scaling win.
 
+## References & further reading
+
+**Core papers**
+
+- **GRPO — DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models.** Shao et al., 2024. The paper that introduced GRPO. [arXiv:2402.03300](https://arxiv.org/abs/2402.03300)
+- **DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning.** Guo et al., 2025. GRPO at scale for reasoning; the R1-Zero paradigm. [arXiv:2501.12948](https://arxiv.org/abs/2501.12948)
+- **PPO — Proximal Policy Optimization Algorithms.** Schulman et al., 2017. The clipped surrogate objective GRPO builds on. [arXiv:1707.06347](https://arxiv.org/abs/1707.06347)
+- **GAE — High-Dimensional Continuous Control Using Generalized Advantage Estimation.** Schulman et al., 2016. Advantage estimation — the critic path GRPO replaces with a group baseline. [arXiv:1506.02438](https://arxiv.org/abs/1506.02438)
+- **InstructGPT — Training Language Models to Follow Instructions with Human Feedback.** Ouyang et al., 2022. The canonical RLHF pipeline. [arXiv:2203.02155](https://arxiv.org/abs/2203.02155)
+
+**GRPO refinements** (the "what I'd do next" directions)
+
+- **Dr. GRPO — Understanding R1-Zero-Like Training: A Critical Perspective.** Liu et al., 2025. Identifies and removes GRPO's length/difficulty optimization biases. [arXiv:2503.20783](https://arxiv.org/abs/2503.20783)
+- **DAPO: An Open-Source LLM Reinforcement Learning System at Scale.** Yu et al., 2025. Dynamic sampling + Clip-Higher; a fully open large-scale RL recipe. [arXiv:2503.14476](https://arxiv.org/abs/2503.14476)
+
+**Dataset & model**
+
+- **GSM8K — Training Verifiers to Solve Math Word Problems.** Cobbe et al., 2021. The grade-school math benchmark used here. [arXiv:2110.14168](https://arxiv.org/abs/2110.14168)
+- **Qwen2.5 Technical Report.** Qwen Team, 2024. The base model. [arXiv:2412.15115](https://arxiv.org/abs/2412.15115)
+
+**Tutorials & explainers**
+
+- **GRPO from first principles** — gitlostmurali. The beginner-friendly blog that inspired this series' style. <https://gitlostmurali.com/blog/grpo-intro/>
+- **DeepSeek's GRPO | Reinforcement Learning for LLMs** — Julia Turc (video). A from-first-principles walkthrough: policy gradients → REINFORCE → actor-critic → PPO → GRPO. <https://www.youtube.com/watch?v=xT4jxQUl0X8>
+- **The RLHF Book** — Nathan Lambert. A broader living reference for the whole RL post-training landscape. <https://rlhfbook.com>
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
